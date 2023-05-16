@@ -1,0 +1,338 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  font-family: "Poppins", sans-serif;
+}
+
+.loader {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.loader_ball {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0rem;
+  position: absolute;
+  width: 0rem;
+  background-color: #e3dffd;
+  border-radius: 50%;
+  display: flex;
+  /* justify-content: space-around; */
+  animation: ball_ani 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes ball_ani {
+  0% {
+  }
+  100% {
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+.left {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  height: 70%;
+  background-color: white;
+  width: 25rem;
+  border-radius: 1rem;
+  transition: all 1s;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.cardOne {
+  animation: cardOne 3s;
+  animation-delay: 1.1s;
+  position: absolute;
+  left: 2rem;
+}
+
+.cardTwo {
+  position: absolute;
+  left: 30rem;
+  animation: cardTwo 3s forwards;
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+.add {
+  position: absolute;
+  background: black;
+  font-size: 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  z-index: 1000;
+  left: 25rem;
+  top: 45%;
+  border: 1px solid black;
+  opacity: 0;
+  animation: addAni 1s forwards;
+  animation-delay: 3.7s;
+  transition: all 250ms;
+}
+
+@keyframes addAni {
+  0% {
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.add:hover {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  color: black;
+}
+
+.cardThree {
+  position: absolute;
+  left: 58rem;
+  animation: cardThree 3s forwards;
+  animation-play-state: paused;
+  animation-delay: 1.1s;
+  opacity: 0;
+}
+
+.right {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: rightThing 1s forwards;
+  animation-delay: 1.5s;
+}
+
+.user_option {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b97bfb;
+  position: absolute;
+  top: 2rem;
+  z-index: 100;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.logIn {
+  left: 2rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  animation: rightThing 1s forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.signUp {
+  left: 10rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  animation: rightThing 1s forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.right h1 {
+  color: #b97bfb;
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.right p {
+  font-size: 1.5rem;
+}
+
+.right .main_div {
+  background-color: white;
+  height: 80%;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(17, 17, 26, 0.15) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.right .enrole {
+  background-color: white;
+  color: #b97bfb;
+  border: none;
+  font-weight: bold;
+  border: 0.5px solid rgba(0, 0, 0, 0.25);
+  box-shadow: rgba(17, 17, 26, 0.15) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  width: 90%;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  margin-block: 2rem;
+  padding: 1rem;
+  transition: all 300ms;
+}
+
+.right .enrole:hover {
+  background-color: #b97bfb;
+  cursor: pointer;
+  color: white;
+}
+
+.right .img_div {
+  /* background-color: blue; */
+  width: 100%;
+  overflow: hidden;
+  margin-block: 2rem;
+  opacity: 0;
+  animation: rightThing 1s forwards;
+  animation-delay: 1.5s;
+}
+
+.right .img_div img {
+  object-fit: cover;
+  height: 100%;
+  animation: rightThing 1s forwards;
+  animation-delay: 1.5s;
+  width: 100%;
+}
+
+.right .navbar {
+  width: 100%;
+  /* background-color: gray; */
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+
+.right .navbar .navlist {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.right .navbar .navlist .list_items {
+  color: #b97bfb;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+}
+
+.about::before {
+  content: " ";
+  background-color: #b97bfb;
+  left: 0;
+  bottom: -10px;
+  height: 5px;
+  border-radius: 1rem;
+  width: 10px;
+  transition: all 300ms;
+  position: absolute;
+}
+
+.about:hover::before {
+  width: 100%;
+}
+
+.boxOne {
+  width: 90%;
+  height: 10rem;
+  margin-block: 2rem;
+  margin-inline: auto;
+  background-color: #b97bfb;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-inline: 1.5rem;
+  color: white;
+  border-radius: 1rem;
+  opacity: 0;
+  animation: rightThing 1s forwards;
+  animation-delay: 1.5s;
+}
+
+.usrONe {
+  width: 7rem;
+  position: absolute;
+  left: 15rem;
+  top: 9rem;
+  height: 7rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  animation: rightThing 1s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes cardOne {
+  0% {
+    left: -50rem;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cardTwo {
+  0% {
+    left: -50rem;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cardThree {
+  0% {
+    left: -50rem;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rightThing {
+  0% {
+  }
+  100% {
+    opacity: 1;
+  }
+}
